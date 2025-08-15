@@ -1,0 +1,26 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Snappy is chat application build with the power of MERN Stack. You can find the tutorial [here](https://www.youtube.com/watch?v=otaQKODEUFs)",
+  "main": "index.js",
+  "scripts": {
+  "dev": "nodemon index.js",
+  "start": "node index.js"
+},
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p-karthik-eng/chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/p-karthik-eng/chat-app/issues"
+  },
+  "homepage": "https://github.com/p-karthik-eng/chat-app#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  }
+}

@@ -136,17 +136,37 @@ const FormContainer = styled.div`
   gap: 1rem;
   align-items: center;
   background-color: #131324;
+  padding: 1rem;
+  
   .brand {
     display: flex;
     align-items: center;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 1rem;
+    
     img {
       height: 5rem;
+      @media (max-width: 768px) {
+        height: 4rem;
+      }
+      @media (max-width: 480px) {
+        height: 3.5rem;
+      }
     }
+    
     h1 {
       color: white;
       text-transform: uppercase;
+      font-size: 2.5rem;
+      font-weight: 700;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+      @media (max-width: 480px) {
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -157,7 +177,24 @@ const FormContainer = styled.div`
     background-color: #00000076;
     border-radius: 2rem;
     padding: 3rem 5rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    
+    @media (max-width: 768px) {
+      padding: 2.5rem 2rem;
+      gap: 1.5rem;
+      border-radius: 1.5rem;
+    }
+    
+    @media (max-width: 480px) {
+      padding: 2rem 1.5rem;
+      gap: 1.2rem;
+      border-radius: 1rem;
+    }
   }
+  
   input {
     background-color: transparent;
     padding: 1rem;
@@ -166,11 +203,29 @@ const FormContainer = styled.div`
     color: white;
     width: 100%;
     font-size: 1rem;
+    transition: all 0.3s ease;
+    
+    @media (max-width: 768px) {
+      padding: 0.9rem;
+      font-size: 0.95rem;
+    }
+    
+    @media (max-width: 480px) {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+    
     &:focus {
       border: 0.1rem solid #997af0;
       outline: none;
+      box-shadow: 0 0 10px rgba(78, 14, 255, 0.3);
+    }
+    
+    &::placeholder {
+      color: #ffffff80;
     }
   }
+  
   button {
     background-color: #4e0eff;
     color: white;
@@ -181,17 +236,56 @@ const FormContainer = styled.div`
     border-radius: 0.4rem;
     font-size: 1rem;
     text-transform: uppercase;
+    transition: all 0.3s ease;
+    min-height: 50px;
+    
+    @media (max-width: 768px) {
+      padding: 0.9rem 1.8rem;
+      font-size: 0.95rem;
+      min-height: 45px;
+    }
+    
+    @media (max-width: 480px) {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+      min-height: 40px;
+    }
+    
     &:hover {
-      background-color: #4e0eff;
+      background-color: #997af0;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(78, 14, 255, 0.4);
+    }
+    
+    &:active {
+      transform: translateY(0);
     }
   }
+  
   span {
     color: white;
     text-transform: uppercase;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    
+    @media (max-width: 768px) {
+      font-size: 0.85rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 0.8rem;
+    }
+    
     a {
       color: #4e0eff;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #997af0;
+        text-decoration: underline;
+      }
     }
   }
 `;
