@@ -154,51 +154,11 @@ const Container = styled.div`
       }
       
       .emoji-picker-wrapper {
-        position: absolute;
-        bottom: 50px;
-        left: -200px;
+        position: fixed;   /* Centered on screen */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 1000;
-        
-        @media (max-width: 768px) {
-          bottom: 60px;
-          left: -150px;
-          transform: scale(0.8);
-        }
-        
-        .emoji-picker-react {
-          background-color: #080420;
-          box-shadow: 0 5px 10px #9a86f3;
-          border-color: #9a86f3;
-          border-radius: 10px;
-          
-          .emoji-scroll-wrapper::-webkit-scrollbar {
-            background-color: #080420;
-            width: 5px;
-            &-thumb {
-              background-color: #9a86f3;
-            }
-          }
-          
-          .emoji-categories {
-            button {
-              filter: contrast(0);
-            }
-          }
-          
-          .emoji-search {
-            background-color: transparent;
-            border-color: #9a86f3;
-            color: white;
-            
-            &::placeholder {
-              color: #9a86f3;
-            }
-          }
-          
-          .emoji-group:before {
-            background-color: #080420;
-          }
-        }
       }
     }
   }
